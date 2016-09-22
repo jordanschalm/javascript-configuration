@@ -46,5 +46,8 @@
   "bugs": {
     "url": "https://github.com/jordanschalm/javascript-starter/issues"
   },
-  "homepage": "https://github.com/jordanschalm/javascript-starter"
+  "homepage": "https://github.com/jordanschalm/javascript-starter",
+  "jest": {
+    "collectCoverageFrom": ["src/**/*.js"]
+  }
 }

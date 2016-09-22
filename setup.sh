@@ -42,7 +42,11 @@ npm install --save-dev eslint-config-ubclaunchpad eslint-config-airbnb babel-esl
 # Configure ESLint
 printf \
 '{
-  "extends": "eslint-config-ubclaunchpad"
+  "extends": "eslint-config-ubclaunchpad",
+  "env": {
+    "browser": true,
+    "jest": true
+  }
 }' > .eslintrc
 # Add eslint script to package.json => `"eslint": "eslint src"`
 
@@ -52,6 +56,11 @@ printf \
 npm install --save-dev jest babel-jest
 # Add test script to package.json => `"jest": "jest"`
 # All tests go in `**/__tests__/*.test.js`
+# Add a jest section to package.json to ensure coverage covers
+# all files, not just those directly tested:
+# "jest": {
+#   "collectCoverageFrom": ["src/**/*.js"]
+# }
 
 #######################
 ## (4) Setting up CI ##
