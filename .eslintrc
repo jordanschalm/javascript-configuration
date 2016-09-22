@@ -1,3 +1,7 @@
 {
-  "extends": "eslint-config-ubclaunchpad"
+  "extends": "eslint-config-ubclaunchpad",
+  "env": {
+    "browser": true,
+    "jest": true
+    }
 }
