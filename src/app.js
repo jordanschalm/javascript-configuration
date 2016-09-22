@@ -1,4 +1,4 @@
-import Hello from './hello';
+import Hello from './Hello';
 import React from 'react';
 import ReactDOM from 'react-dom';
 

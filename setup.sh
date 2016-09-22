@@ -11,27 +11,27 @@ npm install --save babel-preset-es2015
 # Configure Babel
 printf \
 '{
-\t"presets": ["es2015"]
+  "presets": ["es2015"]
 }' > .babelrc
 # Install Webpack
 npm install --save webpack
 # Configure Webpack. Change `entry` and `output` as needed
-mkdir src && mkdir bin && echo "console.log('hello')" > src/app.js
+mkdir src && mkdir bin && echo "console.log('hello')" > src/App.js
 printf \
-'module.exports = {
-\tentry: "./src/app.js",
+"module.exports = {
+\tentry: './src/App.js',
 \toutput: {
-\t\tpath: "./bin",
-\t\tfilename: "app.bundle.js"
+\t\tpath: './bin',
+\t\tfilename: 'app.bundle.js'
 \t},
 \tmodule: {
 \t\tloaders: [{
 \t\t\ttest: /\.js$/,
 \t\t\texclude: /node_modules/,
-\t\t\tloader: "babel-loader"
+\t\t\tloader: 'babel-loader'
 \t\t}]
 \t}
-};' > webpack.config.js
+};" > webpack.config.js
 # Add build script to package.json => `"build": "webpack"`
 
 ############################
@@ -42,7 +42,7 @@ npm install --save-dev eslint-config-ubclaunchpad eslint-config-airbnb babel-esl
 # Configure ESLint
 printf \
 '{
-\t"extends": "eslint-config-ubclaunchpad"
+  "extends": "eslint-config-ubclaunchpad"
 }' > .eslintrc
 # Add eslint script to package.json => `"eslint": "eslint src"`
 
@@ -60,7 +60,7 @@ npm install --save-dev jest babel-jest
 printf \
 'language: node_js
 node_js:
-\t- 6
+  - 6
 ' > .travis.yml
 
 #############################
@@ -72,7 +72,7 @@ npm install --save-dev coveralls
 # Add to TravisCI configuration
 printf \
 'after_success:
-\t- npm run coveralls' >> .travis.yml
+  - npm run coveralls' >> .travis.yml
 
 ##########################
 ## (6) Setting up React ##
@@ -86,8 +86,8 @@ npm install --save babel-plugin-transform-class-properties
 # Update Babel configuration
 printf \
 '{
-\t"presets": ["es2015", "react"],
-\t"plugins": ["transform-class-properties"]
+  "presets": ["es2015", "react"],
+  "plugins": ["transform-class-properties"]
 }' > .babelrc
 # Install Enzyme for testing React components
 npm install --save-dev enzyme

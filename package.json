@@ -12,7 +12,7 @@
     "test": "npm run eslint && npm run jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jordan Schalm",
   "license": "ISC",
   "devDependencies": {
     "babel-eslint": "^6.1.2",
@@ -37,5 +37,13 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "webpack": "^2.1.0-beta.25"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jordanschalm/javascript-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jordanschalm/javascript-starter/issues"
+  },
+  "homepage": "https://github.com/jordanschalm/javascript-starter"
 }
