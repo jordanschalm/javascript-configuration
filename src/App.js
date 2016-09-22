@@ -1,5 +1,13 @@
+import Goodbye from './Goodbye';
 import Hello from './Hello';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<Hello name="Joe" />, document.getElementById('app'));
+const App = () => (
+	<div>
+		<Hello name="Joe" />
+		<Goodbye name="Joe" />
+	</div>
+);
+
+ReactDOM.render(<App />, document.getElementById('app'));
